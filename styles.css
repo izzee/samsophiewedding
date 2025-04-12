@@ -56,7 +56,7 @@ button:hover {
 .more-info {
   position: absolute;
   right: 0;
-  height: 100vh;
+  height: 100dvh;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ button:hover {
   transition: transform 0.25s;
 
   & > *:last-child{ 
-  padding-bottom: 80px;
+    padding-bottom: 80px;
   }
 }
 
