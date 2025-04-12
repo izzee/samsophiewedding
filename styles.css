@@ -49,6 +49,10 @@ button:hover {
   padding: 16px 0;
 }
 
+.text-block p {
+  background-color: #fff;
+}
+
 .more-info {
   position: absolute;
   right: 0;
