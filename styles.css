@@ -62,19 +62,6 @@ button {
 .text-block p {
   background-color: #fff;
 }
-
-.section-header {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 64px;
-  background-color: #fff;
-  border-top: 16px solid #fff;
-  border-bottom: 16px solid #fff;
-}
-
 .more-info {
   position: absolute;
   right: 0;
@@ -88,7 +75,6 @@ button {
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.25s;
-
 }
 
 .rsvp,
@@ -183,6 +169,12 @@ canvas {
   .note {
     color: white;
     background: linear-gradient(#00000000, #dbf0ff);
+  }
+
+  .main-title {
+    margin-top: 40px;
+    color: #dbf0ff;
+    margin: auto;
   }
 }
 
