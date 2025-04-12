@@ -66,6 +66,10 @@ button:hover {
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.25s;
+
+  & > *:last-child{ 
+  padding-bottom: 80px;
+  }
 }
 
 .more-info.visible {
@@ -82,9 +86,9 @@ button:hover {
   position:sticky;
   top: 0;
   right: 0;
-  font-size: 80px;
+  font-size: 40px;
   align-self: flex-end;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .section-header {
