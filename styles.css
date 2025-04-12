@@ -56,7 +56,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 16px;
   overflow: scroll;
   background: rgba(255, 255, 255, 0.67);
   backdrop-filter: blur(10px);
@@ -76,11 +75,6 @@ button:hover {
   line-height: 1.25;
 }
 
-.more-info h2,
-.more-info h3 {
-  text-transform: uppercase;
-}
-
 .more-info button {
   position: sticky;
   top: 0;
@@ -98,10 +92,6 @@ button:hover {
   height: 48px;
   background-color: #fff;
   box-shadow: 0 -16px 0 16px #fff;
-  border-bottom: 16px solid #fff;
-
-  h2 {
-  }
 }
 
 /* Media Components */
