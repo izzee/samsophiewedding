@@ -57,7 +57,7 @@ export function fairyDustCursor(options) {
       canvas.height = height;
     }
 
-    context.font = '45px serif'; // Changed from 21px to 45px
+    context.font = '80px serif';
     context.textBaseline = 'middle';
     context.textAlign = 'center';
 
@@ -73,7 +73,7 @@ export function fairyDustCursor(options) {
 
       bgContext.fillStyle = color;
       bgContext.textAlign = 'center';
-      bgContext.font = '45px serif'; // Changed from 21px to 45px
+      bgContext.font = '80px serif'
       bgContext.textBaseline = 'middle';
       bgContext.fillText(
         char,
@@ -233,6 +233,9 @@ const buttons = document.querySelectorAll('button')
 
 const toggleSection = (e) => {
   const target = e.target.getAttribute('data-target')
+  if (document.querySelector('.visible')){
+    document.querySelector('.visible').classList.remove('visible');
+  }
   document.querySelector(`.${target}`).classList.toggle('visible')
 }
 
@@ -243,6 +246,6 @@ buttons.forEach((button) => {
 
 window.addEventListener('load', (event) => {
   new fairyDustCursor({
-    colors: ['#a000c977', '#8200ff77', '#f3b0f977'],
+    colors: ['#a000c9', '#8200ff', '#f3b0f9'],
   });
 });

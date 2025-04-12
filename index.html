@@ -20,11 +20,11 @@
       <p>Stewarts Point, CA</p>
       <p>See you there!</p>
       <button data-target="more-info">More info ➩</button>
-      <button>RSVP ➩</button>
+      <button data-target="rsvp">RSVP ➩</button>
     </div>
 
     <div class="more-info">
-      <button data-target="more-info">➩</button>
+      <button>X</button>
       
       <h2>Weather!</h2>
       <p>The Gualala area stays relatively cool year-round (even in the summer)! Think foggy mornings with high 60s/low 70s
@@ -79,6 +79,116 @@
         give any money towards that trip we are accepting and appreciating it here. We also would appreciate donations towards
         the Palestine Children's Relief Fund here or No More Deaths here as gifts as well.</p>
 
+    </div>
+
+    <div class="rsvp">
+      <button>X</button>
+      <form name="wedding-rsvp" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="rsvp-form">
+      
+        <!-- Honeypot field to prevent spam -->
+        <p style="display:none">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+      
+        <!-- This hidden input helps Netlify identify the form -->
+        <input type="hidden" name="form-name" value="wedding-rsvp" />
+      
+        <div class="form-group">
+          <label class="required" for="attending">Will your party be attending the festivities?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="attending-yes" name="attending" value="Yes" required>
+              <label for="attending-yes">Yes</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="attending-no" name="attending" value="No">
+              <label for="attending-no">No</label>
+            </div>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label class="required" for="party-names">Please list the name of each member of your party</label>
+          <textarea id="party-names" name="party-names" required></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label class="required" for="welcome-event">Will you/your party be attending any welcome night events?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="welcome-yes" name="welcome-event" value="Yes" required>
+              <label for="welcome-yes">Yes</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="welcome-no" name="welcome-event" value="No">
+              <label for="welcome-no">No</label>
+            </div>
+          </div>
+          <p>Dinner for family starting at 6:00pm, drinks for all starting 7:30pm</p>
+        </div>
+      
+        <div class="form-group">
+          <label class="required" for="ceremony-reception">Will you/your party be attending the ceremony and reception on July
+            26, 2025?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="ceremony-yes" name="ceremony-reception" value="Yes" required>
+              <label for="ceremony-yes">Yes</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="ceremony-no" name="ceremony-reception" value="No">
+              <label for="ceremony-no">No</label>
+            </div>
+          </div>
+          <p>Starting at ~4:00pm</p>
+        </div>
+      
+        <div class="form-group">
+          <label class="required" for="goodbye-breakfast">Will you/your party be attending the goodbye breakfast on July 27,
+            2025?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="breakfast-yes" name="goodbye-breakfast" value="Yes" required>
+              <label for="breakfast-yes">Yes</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="breakfast-no" name="goodbye-breakfast" value="No">
+              <label for="breakfast-no">No</label>
+            </div>
+          </div>
+          <p>Starting at ~10:00am</p>
+        </div>
+      
+        <div class="form-group">
+          <label for="vegetarian">Are any members of your party vegetarian? If yes, please write their name(s).</label>
+          <textarea id="vegetarian" name="vegetarian"></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="dietary">Do any members of your party have any food allergies or other dietary restrictions?</label>
+          <textarea id="dietary" name="dietary-restrictions"></textarea>
+          <p>If yes, please write their name(s) and specific restrictions</p>
+        </div>
+      
+      
+        <div class="form-group">
+          <label for="questions">Do you have any questions or other information that it might be helpful for us to
+            know?</label>
+          <textarea id="questions" name="additional-info"></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="email">Email Address (Optional)</label>
+          <input type="email" id="email" name="email">
+          <p>For follow-up communications if needed</p>
+        </div>
+      
+        <button type="submit">Submit RSVP</button>
+      </form>
+      
+      <p class="note">Please submit your RSVP by June 15, 2025. If you have any questions, please contact us at <a
+          href="mailto:example@email.com">example@email.com</a></p>
+      </div>
     </div>
     
     <div class="slideshow">
