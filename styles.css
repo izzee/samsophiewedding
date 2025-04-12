@@ -36,10 +36,14 @@ button {
   svg {
     fill: black;
   }
-}
+  &.more-info-btn:hover {
+    background: rgb(231, 255, 154);
+  }
 
-button:hover {
-  background-color: yellow;
+  &.rsvp-btn:hover {
+    background: rgba(85, 0, 255, 0.67);
+  }
+
 }
 
 /* Layout Components */
@@ -156,12 +160,6 @@ canvas {
   pointer-events: none;
 }
 
-/* Media Queries */
-@media screen and (min-width: 768px) {
-
-}
-
-
 .rsvp {
   position: fixed;
   right: 0;
@@ -177,8 +175,6 @@ canvas {
   transform-origin: right;
   transition: transform 0.25s;
 
-  &
-
   p {
     font-size: 16px;
     line-height: 1.25;
@@ -186,7 +182,7 @@ canvas {
 
   .note {
     color: white;
-    background: linear-gradient(#00000000, white);
+    background: linear-gradient(#00000000, #dbf0ff);
   }
 }
 
