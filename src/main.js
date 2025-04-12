@@ -15,7 +15,7 @@ export function fairyDustCursor(options) {
   const canvImages = [];
   let canvas, context, animationFrame;
 
-  const char = '♥';
+  const char = '♡';
 
   const prefersReducedMotion = window.matchMedia(
     '(prefers-reduced-motion: reduce)'
@@ -57,7 +57,7 @@ export function fairyDustCursor(options) {
       canvas.height = height;
     }
 
-    context.font = '21px serif';
+    context.font = '80px serif';
     context.textBaseline = 'middle';
     context.textAlign = 'center';
 
@@ -73,7 +73,7 @@ export function fairyDustCursor(options) {
 
       bgContext.fillStyle = color;
       bgContext.textAlign = 'center';
-      bgContext.font = '21px serif';
+      bgContext.font = '80px serif'
       bgContext.textBaseline = 'middle';
       bgContext.fillText(
         char,
@@ -228,6 +228,21 @@ export function fairyDustCursor(options) {
     destroy: destroy,
   };
 }
+
+const buttons = document.querySelectorAll('button')
+
+const toggleSection = (e) => {
+  const target = e.target.getAttribute('data-target')
+  if (document.querySelector('.visible')){
+    document.querySelector('.visible').classList.remove('visible');
+  }
+  document.querySelector(`.${target}`).classList.toggle('visible')
+}
+
+buttons.forEach((button) => {
+  button.addEventListener('click', toggleSection);
+});
+
 
 window.addEventListener('load', (event) => {
   new fairyDustCursor({

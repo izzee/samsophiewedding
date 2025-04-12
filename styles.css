@@ -1,72 +1,210 @@
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #fff;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #dbf0ff;
   color: #000;
+  font-family: Arial, sans-serif;
 }
 
-.border {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+/* Typography */
+h2,
+h3,
+p,
+button {
+  display: block;
+  padding: 8px 16px;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: normal;
 }
 
+/* Button Styles */
+button {
+  appearance: none;
+  color: #000;
+  background-color: white;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+
+  svg {
+    fill: black;
+  }
+  &.more-info-btn:hover {
+    background: rgb(231, 255, 154);
+  }
+
+  &.rsvp-btn:hover {
+    background: rgba(85, 0, 255, 0.67);
+  }
+
+}
+
+/* Layout Components */
 .text-block {
   position: fixed;
-  top: 0px;
-  left: 0px;
-  gap: clamp(16px, 3vw, 32px);
+  top: 0;
+  left: 0;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: start;
-  z-index: 1;
-
-
-  p {
-    padding: 8px 16px;
-    font-size: clamp(24px, 3vw, 56px);
-    line-height: 1;
-    display: inline-block;
-    background-color: white;
-    font-family: Arial, sans-serif;
-  }
+  gap: 24px;
+  padding: 16px 0;
 }
 
+.text-block p {
+  background-color: #fff;
+}
+.more-info {
+  position: absolute;
+  right: 0;
+  height: 100dvh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  background: rgba(212, 248, 95, 0.67);
+  backdrop-filter: blur(10px);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+
+.rsvp,
+.more-info {
+  p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  button {
+    position: sticky;
+    top: 24px;
+    right: 24px;
+    font-size: 40px;
+    align-self: flex-end;
+    font-weight: normal;
+    mix-blend-mode: difference;
+  }
+  &>*:last-child {
+    padding-bottom: 80px;
+  }
+}
+.rsvp {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+
+.rsvp.visible,
+.more-info.visible {
+  transform: scaleX(100%);
+}
+
+/* Media Components */
 .slideshow {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  z-index: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
 
-
-  video {
-    width: clamp(320px, 50%, 560px);
-  }
+.slideshow video {
+  width: clamp(320px, 50%, 560px);
 }
 
 .bottom-gif {
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 3;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: darken;
+}
 
-  img {
-    width: clamp(300px, 25%, 800px);
-    position: fixed;
-    bottom: 0;
-    right: 0;
-  }
+.bottom-gif img {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: clamp(300px, 25%, 800px);
 }
 
 canvas {
   z-index: 3;
+  pointer-events: none;
+}
+
+.rsvp {
+  position: fixed;
+  right: 0;
+  height: 100dvh;
+  width: 100vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  background: rgba(85, 0, 255, 0.67);
+  backdrop-filter: blur(10px);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+
+  p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .note {
+    color: white;
+    background: linear-gradient(#00000000, #dbf0ff);
+  }
+
+  .main-title {
+    margin-top: 40px;
+    color: #dbf0ff;
+    margin: auto;
+  }
+}
+
+button[type='submit'],
+.form-group {
+  margin: 24px;
+  padding: 24px;
+  background: linear-gradient(#dbf0ff, white);
+
+  p {
+    padding: 0;
+  }
+}
+
+textarea {
+  display: block;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+  .more-info, 
+  .rsvp {
+    width: 50vw;
+  }
+  h2,
+  h3,
+  p,
+  button {
+    font-size: 40px;
+    line-height: 1;
+  }
 }
