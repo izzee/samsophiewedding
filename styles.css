@@ -220,10 +220,6 @@ textarea {
   .more-info, 
   .rsvp {
     width: 50vw;
-    button {
-      top: 24px;
-      right: 24px;
-    }
   }
   h2,
   h3,
@@ -235,7 +231,6 @@ textarea {
 
   button[type='submit'],
   .form-group {
-    margin: 24px;
     padding: 24px;
   }
 }
