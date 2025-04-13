@@ -28,7 +28,7 @@ button {
 button {
   appearance: none;
   color: #000;
-  background-color: white;
+  background-color: #ffffff;
   border: 0;
   text-decoration: none;
   cursor: pointer;
@@ -71,7 +71,7 @@ button {
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  background: #e7ff9acc;
+  background: linear-gradient(90deg, #e7ff9acc, #dbf0ff);
   backdrop-filter: blur(10px);
   transform: scaleX(0);
   transform-origin: right;
@@ -97,7 +97,8 @@ button {
     mix-blend-mode: difference;
 
     &:hover {
-      filter: invert(1);
+      background-color: blue;
+      color: cyan;
     }
   }
   &>*:last-child {
@@ -174,7 +175,7 @@ canvas {
   }
 
   .note {
-    color: white;
+    color: #ffffff;
     background: linear-gradient(#00000000, #dbf0ff);
   }
 
@@ -185,19 +186,23 @@ canvas {
   }
 }
 
+.form-group {
+  background: linear-gradient(#dbf0ff, #ffffff);
+}
+
 button[type='submit'],
 .form-group {
   margin: 24px;
   padding: 24px;
   width: auto;
-  background: linear-gradient(#dbf0ff, white);
 
   p {
     padding: 0;
   }
 }
-
+input#email,
 textarea {
+  height: 40px;
   display: block;
   width: 100%;
   resize: none;
