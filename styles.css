@@ -95,6 +95,8 @@ button {
     align-self: flex-end;
     font-weight: normal;
     mix-blend-mode: difference;
+    opacity: 0;
+    transition: opacity .5s 1s;
 
     &:hover {
       background-color: blue;
@@ -114,6 +116,10 @@ button {
 .rsvp.visible,
 .more-info.visible {
   transform: scaleX(100%);
+
+  button {
+    opacity: 1;
+  }
 }
 
 /* Media Components */

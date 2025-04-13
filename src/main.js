@@ -57,7 +57,7 @@ export function fairyDustCursor(options) {
       canvas.height = height;
     }
 
-    context.font = '80px serif';
+    context.font = '120px serif';
     context.textBaseline = 'middle';
     context.textAlign = 'center';
 
@@ -73,7 +73,7 @@ export function fairyDustCursor(options) {
 
       bgContext.fillStyle = color;
       bgContext.textAlign = 'center';
-      bgContext.font = '80px serif'
+      bgContext.font = '120px serif'
       bgContext.textBaseline = 'middle';
       bgContext.fillText(
         char,
