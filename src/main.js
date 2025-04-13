@@ -236,7 +236,9 @@ const toggleSection = (e) => {
   if (document.querySelector('.visible')){
     document.querySelector('.visible').classList.remove('visible');
   }
-  document.querySelector(`.${target}`).classList.toggle('visible')
+  if (document.querySelector(`.${target}`)){
+    document.querySelector(`.${target}`).classList.toggle('visible');
+  }
 }
 
 buttons.forEach((button) => {

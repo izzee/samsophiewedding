@@ -96,7 +96,7 @@ button {
     font-weight: normal;
     mix-blend-mode: difference;
     opacity: 0;
-    transition: opacity .5s 1s;
+    transition: opacity 1s .25s;
 
     &:hover {
       background-color: blue;
