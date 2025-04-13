@@ -7,7 +7,7 @@
 body {
   width: 100vw;
   overflow: hidden;
-  background-color: #dbf0ff;
+  background: #dbf0ff;
   color: #000;
   font-family: Arial, sans-serif;
 }
@@ -37,13 +37,14 @@ button {
     fill: black;
   }
   &.more-info-btn:hover {
-    background: rgb(231, 255, 154);
+    background: #e7ff9a;
+    color: #5500ff;
   }
 
   &.rsvp-btn:hover {
-    background: rgba(85, 0, 255, 0.67);
+    background: #5500ff;
+    color: #e7ff9a;
   }
-
 }
 
 /* Layout Components */
@@ -70,7 +71,7 @@ button {
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  background: rgba(212, 248, 95, 0.67);
+  background: #e7ff9acc;
   backdrop-filter: blur(10px);
   transform: scaleX(0);
   transform-origin: right;
@@ -88,10 +89,16 @@ button {
     position: sticky;
     top: 24px;
     right: 24px;
-    font-size: 40px;
+    width: 40px;
+    padding: 8px;
+    font-size: 24px;
     align-self: flex-end;
     font-weight: normal;
     mix-blend-mode: difference;
+
+    &:hover {
+      filter: invert(1);
+    }
   }
   &>*:last-child {
     padding-bottom: 80px;
@@ -155,7 +162,7 @@ canvas {
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  background: rgba(85, 0, 255, 0.67);
+  background: #5500ffaa;
   backdrop-filter: blur(10px);
   transform: scaleX(0);
   transform-origin: right;
@@ -173,8 +180,8 @@ canvas {
 
   .main-title {
     margin-top: 40px;
+    text-align: center;
     color: #dbf0ff;
-    margin: auto;
   }
 }
 
@@ -182,6 +189,7 @@ button[type='submit'],
 .form-group {
   margin: 24px;
   padding: 24px;
+  width: auto;
   background: linear-gradient(#dbf0ff, white);
 
   p {
@@ -192,6 +200,7 @@ button[type='submit'],
 textarea {
   display: block;
   width: 100%;
+  resize: none;
 }
 
 
