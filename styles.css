@@ -87,8 +87,8 @@ button {
 
   button {
     position: sticky;
-    top: 24px;
-    right: 24px;
+    top: 16px;
+    right: 16px;
     width: 40px;
     padding: 8px;
     font-size: 24px;
@@ -198,8 +198,8 @@ canvas {
 
 button[type='submit'],
 .form-group {
-  margin: 24px;
-  padding: 24px;
+  margin: 16px;
+  padding: 16px;
   width: auto;
 
   p {
@@ -219,6 +219,10 @@ textarea {
   .more-info, 
   .rsvp {
     width: 50vw;
+    button {
+      top: 24px;
+      right: 24px;
+    }
   }
   h2,
   h3,
@@ -226,5 +230,11 @@ textarea {
   button {
     font-size: 40px;
     line-height: 1;
+  }
+
+  button[type='submit'],
+  .form-group {
+    margin: 24px;
+    padding: 24px;
   }
 }
